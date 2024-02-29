@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'TNC/style.css' %}">
+    <title>TNC</title>
+</head>
+<body>
+    <nav>
+        <button class="btn"><a class="link" href="{% url 'mesure-liste' %}">Mesure</a></button>
+        <button class="btn"><a class="link" href="{% url 'commande-liste' %}">Commande</a></button>
+        <button class="btn"><a class="link" href="{% url 'commande-create' %}">ajouter une commande</a></button>
+        <button class="btn"><a class="link" href="{% url 'mesure-create' %}">ajouter une mesure</a></button>
+        <button class="btn"><a class="link" href="/contact/">Contact</a></button>
+    </nav>
+
+    <h1>BIENVENUE DANS CHEZ TNC COUTURE</h1>
+    {% block contenu %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'TNC/base.html' %}
+{% block contenu %}
+
+<h2>{{ commande.type }}</h2>
+<ul>
+    <li>prenom : {{ commande.mesure.prenom}}</li>
+    <li>nom : {{ commande.mesure.nom}}</li>
+    <li>Genre : {{ commande.mesure.get_genre_display }}</li>
+    <li>Année : {{ commande.mesure.year }}</li>
+    <li>Actif : {{ commande.mesure.active|yesno }}</li>
+    <li>page : <a href="{{ mesures.page_officielle }}">{{ commande.mesure.page_officielle }}</a></li>
+</ul>
+<a href="{% url 'commande-update' commande.id %}">Modifier ce commande</a>
+<a href="{% url 'commande-liste' %}">Retour à tous les commandes</a>
+
+
+{% endblock %}

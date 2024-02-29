@@ -1,0 +1,16 @@
+{% extends 'TNC/base.html' %}
+
+{% block contenu %}
+
+<h1>Commande</h1>
+
+
+<ul>
+    {% for commande in commande %}
+    <li><a href="{% url 'commande-detail' commande.id %}">{{ commande.type }}</a>
+        <a href="{% url 'commande-update' commande.id %}"> &nbsp; &nbsp;[ Editer ]</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

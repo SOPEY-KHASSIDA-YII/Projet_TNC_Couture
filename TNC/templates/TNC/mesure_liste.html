@@ -1,0 +1,23 @@
+{% extends 'TNC/base.html' %}
+
+{% block contenu %}
+
+<h1>Mesures</h1>
+
+<div class="mesure_list">
+    {% for mesure in mesures %}
+    <span class="mesure">
+        <a id="nom_mesure" href="{% url 'mesure-detail' mesure.id %}">{{ mesure.prenom}} {{mesure.nom}}</a>
+        
+    </span>
+    <span class="list">
+        <button><a href="{% url 'mesure-update' mesure.id %}">[Modifier]</a></button>
+        <button><a href="{% url 'mesure-delete' mesure.id %}">[supprimer]</a></button>
+    </span>
+
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}
