@@ -17,6 +17,11 @@ class Mesure(models.Model):
         validators = [MinValueValidator(1900),MaxValueValidator(2021)])
     page_officielle = models.fields.URLField(null = True, blank = True)
     active = models.fields.BooleanField(default = True)
+    epaule = models.fields.IntegerField()
+    longueur_bb= models.fields.IntegerField()
+    coup = models.fields.IntegerField()
+    bras = models.fields.IntegerField()
+    longueur_pt = models.fields.IntegerField()
     
 class Commande(models.Model):
 
