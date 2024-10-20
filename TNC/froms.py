@@ -9,7 +9,7 @@ class ContactUsForm(forms.Form):
 class MesureForm(forms.ModelForm):
    class Meta:
       model = Mesure
-      # fields = '__all__'
+      #fields = '__all__'
       exclude = ('active', 'page_officielle')
       
 class CommandeForm(forms.ModelForm):

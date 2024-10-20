@@ -1,18 +1,20 @@
-
 {% extends 'TNC/base.html' %}
 
 {% block contenu %}
 
 <h2>{{ mesures.nom }}</h2>
+<h2>{{ commande.type }}</h2>
 
 <ul>
     <li>Genre : {{ mesures.get_genre_display }}</li>
     <li>Tel : {{ mesures.tel }}</li>
-    <li>Année : {{ mesures.year }}</li>
-    <li>Actif : {{ mesures.active|yesno }}</li>
-    <li>page : <a href="{{ mesures.page_officielle }}">{{ mesures.page_officielle }}</a></li>
+    <li>Epaule : {{ mesures.epaule }}</li>
+    <li>longueur Boubou : {{ mesures.longueur_bb }}</li>
+    <li>Coup : {{ mesures.coup }}</li>
+    <li>Bras : {{ mesures.bras }}</li>
+    <li>Longueur Pantalon : {{ mesures.longueur_pt }}</li>
 </ul>
-        
+
 <a href="{% url 'mesure-update' mesures.id %}">Modifier ce mesure</a>
 <a href="{% url 'mesure-liste' %}">Retour à tous les groupes</a>
 

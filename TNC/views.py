@@ -87,7 +87,7 @@ def commande_update(request, id):
         form = CommandeForm(request.POST, instance=commandes)
         if form.is_valid:
             commandes = form.save()
-        return redirect('commande-detail',commande.id)
+        return redirect('commande-detail',commandes.id)
     else:
         form = CommandeForm(instance=commandes)
     return render(request,
